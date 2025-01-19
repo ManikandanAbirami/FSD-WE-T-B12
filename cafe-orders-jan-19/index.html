@@ -1,0 +1,36 @@
+<!-- Display the output of the script.js file -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cafe Orders</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #cafe-orders {
+        margin: 0 auto;
+        width: 50%;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>The Cafe Orders</h1>
+      <!-- On button click, display the output of the script.js file -->
+      <div id="cafe-orders"></div>
+      <hr />
+      <button onclick="displayCafeOrders()">Display Cafe Orders</button>
+      <hr />
+      <button onclick="coffee()">Coffee</button>
+      <hr />
+      <button onclick="tea()">Tea</button>
+      <hr />
+      <button onclick="sandwich()">Sandwich</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
