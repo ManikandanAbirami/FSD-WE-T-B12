@@ -1,6 +1,8 @@
 let todos = [];
 
 function addTodo() {
+  console.log(todos.length);
+  console.log(todos);
   const todoText = document.getElementById("todo-text").value.trim();
   if (todoText === "") {
     alert("Please enter a task.");
@@ -20,7 +22,7 @@ function addTodo() {
 function renderTodos() {
   const todoList = document.getElementById("todo-list");
   todoList.innerHTML = "";
-
+  debugger;
   todos.forEach((todo) => {
     const li = document.createElement("li");
     li.innerHTML = `
