@@ -1,0 +1,28 @@
+<!-- Create a new button on every button click, the button should be created inside the div with id "buttons" -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="buttons" class="div"></div>
+    <button id="btn">Click me</button>
+    <label for="sum">Result</label>
+    <input id="sum" type="text" />
+    <script>
+      let x = 1;
+      let y = 200;
+      let sum = x + y;
+      document.getElementById("sum").value = sum;
+      const btn = document.getElementById("btn");
+      const buttons = document.getElementById("buttons");
+      btn.addEventListener("click", function () {
+        const newBtn = document.createElement("button");
+        newBtn.innerText = "New Button";
+        buttons.appendChild(newBtn);
+      });
+    </script>
+  </body>
+</html>
