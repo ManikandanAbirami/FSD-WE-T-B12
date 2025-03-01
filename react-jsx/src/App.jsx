@@ -1,3 +1,4 @@
+import Home from "./Home"
 import List from "./List"
 
 const list = [
@@ -6,8 +7,6 @@ const list = [
     objectID: "1",
     url: "https://reactjs.org/",
     author: "Jordan Walke",
-    num_comments: 3,
-    points: 4,
 
   },
   {
@@ -15,8 +14,6 @@ const list = [
     objectID: "2",
     url: "https://redux.js.org/",
     author: "Dan Abramov, Andrew Clark",
-    num_comments: 2,
-    points: 5,
   }
 ]
 
@@ -31,10 +28,16 @@ function App() {
       <hr />
 
       <List list={list} />
+      <hr />
+      <List list={list} />
+      <hr />
+      <List list={list} />
+
+      <Home />
     </div>
   )
 }
-
+export default App
 // function List() {
 //   return (
 //     <ul>
@@ -53,5 +56,7 @@ function App() {
 //     </ul>
 //   )
 // }
+{/* <List list={list} num1={1} num2={2} /> */ }
+// List({list: list, num1: 1, num2: 2});
 
-export default App
+

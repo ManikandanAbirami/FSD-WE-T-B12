@@ -1,10 +1,10 @@
 import React from 'react'
 
-function List({ list }) {
+function List(props) { // {list}
     return (
         <ul>
             {
-                list.map(function (item) {
+                props.list.map(function (item) {
                     return (<li key={item.objectID}>
                         <span>
                             <a href={item.url}>{item.title}</a>
