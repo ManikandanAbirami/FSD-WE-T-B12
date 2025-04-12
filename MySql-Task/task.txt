@@ -1,0 +1,33 @@
+CREATE DATABASE south_indian_restaurant;
+USE south_indian_restaurant;
+
+CREATE TABLE menu (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(5,2)
+);
+
+CREATE TABLE orders (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    item_ordered VARCHAR(50),
+    order_date DATE
+);
+SELECT * FROM menu;
+
+'2025-04-12'
+'2025-04-11'
+
+INSERT INTO menu (item_name, category, price)
+VALUES
+	('Idli', 'Breakfast', 30.00),
+    ('Dosa', 'Breakfast', 40.00),
+    ('Chicken Briyani', 'Lunch', 120.00),
+    ('Curd Rice', 'Lunch', 60.00);
+    
+SET SQL_SAFE_UPDATES = 0;
+UPDATE menu SET price = 35.00 WHERE item_name = 'Idli'; 
+DELETE FROM menu WHERE item_name = 'Dosa';
+SELECT * FROM menu WHERE category = 'Lunch';
+
