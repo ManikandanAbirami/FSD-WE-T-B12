@@ -1,23 +1,15 @@
-// Lets create a server
 const http = require("http");
-const hostname = "localhost";
-const port = 3000;
+
 const server = http.createServer((req, res) => {
-  // send response in json format
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "application/json");
-  res.end(
-    JSON.stringify({
-      message: "Hello World",
-      date: new Date().toLocaleDateString(),
-      time: new Date().toLocaleTimeString(),
-      ip: req.connection.remoteAddress,
-      port: req.connection.remotePort,
-      headers: req.headers,
-      method: req.method,
-    })
-  );
+  if (req.url === "/") {
+    res.end("Welcome to our home page");
+  } else if (req.url === "/about") {
+    res.end("Here is our short history");
+  } else {
+    res.end("Page not found");
+  }
 });
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+
+server.listen(5001, () => {
+  console.log("Server is listening on port 5001");
 });

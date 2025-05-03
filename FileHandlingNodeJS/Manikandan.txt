@@ -1,0 +1,5 @@
+IT Fundamentals introduces computer hardware, computer software, databases, networking, security, and software development.
+
+This course comprises 15 lessons covering IT fundamentals. Each lesson includes a combination of Wikipedia readings, YouTube videos, and hands-on learning activities. The course also assists learners in preparing for CompTIA IT Fundamentals certification.
+
+This entire Wikiversity course can be downloaded in book form by selecting Download Learning Guide in the sidebar.
