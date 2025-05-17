@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const recipeRoutes = require("./routes/recipeRoutes");
+const connectDB = require("./config/db");
+
+connectDB();
 
 //Middleware to parse JSON
 app.use(express.json());
