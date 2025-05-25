@@ -16,12 +16,11 @@ const createTask = async (req, res) => {
 
 const deleteTask = async (req, res) => {
   const task = await Task.findById(req.params.id);
-  if (!task) {
-    res.status(404);
-    throw new Error("Task not found");
+  if (task && task.user.toString() === req.user._id.toString()) {
+    await task.deleteOne();
+    res.status(200).json({ message: "Task deleted" });
   } else {
-    await task.remove();
-    res.status(200).json({ id: req.params.id });
+    res.status(404).json({ message: "Task not found" });
   }
 };
 
